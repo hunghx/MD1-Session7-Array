@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Mảng 1 chiều 
+
+        // khai bảo mảng 1 chiều 
+        let newArray = [1, true, "hùng", function getName() { }, undefined, null, {}, 4.5]
+        // console.log(newArray)
+        let newArray2 = new Array(1, 2, 3, 4, 5, undefined, null);
+        // truy cập phần tử mảng
+        // console.log(newArray[3]);
+        // mảng nhiều chiều
+        // mảng 2 chiều ;
+        let mang2Chieu = [[1, 2, true], [3, 4, 6], [undefined, null, {}]];
+        let mang2Chieu2 = new Array(new Array(1, 2, true), new Array(3, 4, 6), new Array(undefined, null, {}))
+
+        // console.log("mang 2 chieu 1", mang2Chieu);
+        // console.log("mang 2 chieu 2", mang2Chieu2);
+
+        //các phương thúc làm viejc với mảng
+        // push
+        let pushArray = [1, 2, 3, 4];
+        pushArray.push(5, 6, 7, 8, 9);
+        console.log("push array", pushArray);
+
+        //pop
+        let popArray = ["banana", "orange", "lemon"];
+        popArray.pop();
+        // console.log("pop array", popArray)
+
+        // shift, unshift
+
+        let unshiftArray = [1, 2, 3, 4, 5];
+        unshiftArray.unshift("số không", "số 1", null)
+        // console.log("unshift aray", unshiftArray);
+
+        unshiftArray.shift();
+        unshiftArray.shift();
+        unshiftArray.shift();
+        unshiftArray.shift();
+
+        // console.log("shift array", unshiftArray)
+
+        // concat - nooooismangr\
+        let concatArray = pushArray.concat(popArray, unshiftArray)
+        // console.log("concat Array", concatArray);
+
+        // copyWithin 
+        let copyWithinArray = [1, 2, 3, 4, 5, 6];
+        copyWithinArray.copyWithin(2, 0, 4);
+        // console.log(copyWithinArray);
+        // 1,2,1,2,3,6
+
+        // index of lấy ra chỉ số , vị trí phần tử mảng được tìm thấy đàu tiên từ trái qua phải
+        let arrayIndex = [1, 2, 3, 1, 2, 3, 4];
+        // tìm index của phần tử 3 đầu tiên trong mảng
+        // console.log(arrayIndex.indexOf(3, 3)); // 5
+
+        // join chuyển mảng thành chuỗi bằng cách nối cách phần tử bởi 1 kí tự
+
+        let stringArray = arrayIndex.join(",")
+        // console.log(stringArray);
+        // splice -  cắt mảng và thêm phẩn tử
+        let arraySplice = [1, 2, 3, 1, 2, 3, 4];
+        arraySplice.splice(2, 3, 5, 6, 7, 8, 9, 10, 10, 11)
+        // console.log(arraySplice);
+
+        // Duyệt mảng , làm việc với mảng
+        let newArrayLoop = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        // for i
+        for (let i = 0; i < newArrayLoop.length; i++) {
+            // console.log(newArrayLoop[i]);
+        }
+        // for in -  lặp theo index
+        for (let index in newArrayLoop) {
+            // console.log(newArrayLoop[index]);
+        }
+        // for of - lặp theo giá trị từng phần tử của mảng
+
+        for (let value of newArrayLoop) {
+            console.log(value);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
