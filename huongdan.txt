@@ -1,0 +1,65 @@
+- Bài tập 2: 
+ma trận
+array[i][j]
+mảng 3 x 3: arr[3][3];
+1 1 1
+1 1 1
+1 1 1
+
+đường chéo chính , đường chéo phụ (ma trận vuông là ma trận có i = j) ma trận n x n:
+-đường chéo chính: i=j
+1 0 0 0 -> j =0
+0 1 0 0
+0 0 1 0
+0 0 0 1 -> j = n-1
+- đường chéo phụ : i+j=n-1
+i=0    i=n-1
+0 0 0 1
+0 0 1 0
+0 1 0 0
+1 0 0 0 
+-- hướng dẫn :
+b1 : nhập độ số hàng số cột của mảng : i = j =n
+cho người dùng nhập vào số nguyên dương n -> mảng 2 chiều của mình là array[n][n];
+cú pháp khai báo mảng 2 chiều  let array = [];
+b2 : nhập vào giá trị từng phần tử : n x n thì sẽ có n*n phần tử
+for(i từ 0 -> <n){
+    
+    for(j từ 0-> <n ){
+        array[i][j]=+prompt("nhập vào phần tử")
+    }
+}
+
+b3: in ra thì sử dụng cấu trúc như b2, chỉ thay thế console.log vào dòng nhập số 27
+b4: điều kiện để xét đưỜng biên là i==0, i==n-1, j==0, j==n-1;
+b5: điểu kiện là đường chéo chính : i==j
+điều kiện là đường chéo phu : i+j ==n-1
+
+b6; duyệt theo dòng tức là chỉ có 1 vòng lặp for i
+for(i từ 0 -> <n){
+    array[i];
+    sử dụng thuật toán sắp xếp để sắp xếp mảng array[i]
+}
+
+["blue", "jazz", "helo", 1, 3,0,-1] index = (length -1 )/2
+- Bài 3 .
+-- thêm phần tử bvaof cuois mảng : push 
+-- lấy ra tổng số phần tử mảng .length
+-- if() nếu số phần tử là lẻ thì thay thế phần thử chính giữ bằng classic
+-- index của phần tử chính giữa =  (length -1 )/2
+-- array[index] = value;
+-- Xoá phần tử đầu của mảng : shift()// unshift()
+-- hiển thị mảng - console.log(array)
+Bài 4;
+b1 :  khai báo mản 1 chiều:
+b2 : nhập vào đến khi nào giá trị nhập vào không phải số, chuỗi trống, null 
+isNaN() trả về true nếu đối số truyền vào không phải là số và ko chuyển đc thành số
+        trả về false nếu ngược lại 
+"" -  .trim() để xoá các kí tự trắng trong chuỗi
+!== null
+- dùng vòng lặp while hoặc do while
+ 
+ Bài 5 :
+ b1 khai báo và khởi tạo mảng ví dụ array [1,2,3,4,6,9,-1,-4,-5]
+ b2 nhập vào 2 số nguyên a và b ví dụ nhập a=1 b =-2;
+ arrayResult = các phần tử của mảng array mà nẵm trong khoảng -2 , 1 = [1,-1]

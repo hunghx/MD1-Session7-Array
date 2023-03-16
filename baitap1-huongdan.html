@@ -20,6 +20,11 @@
         // Nhập 5 lần thì sẽ sử dụng vòng lặp for ... i
         for (let i = 0; i < 5; i++) {
             arrayInt[i] = +prompt("Nhập giá trị cho phần tử thứ " + (i + 1));
+            //arrayInt[0]=
+            //arrayInt[1]=
+            //arrayInt[2]=
+            //arrayInt[3]=
+            // arrayInt[4] = 
             // Ở đây chúng ta dùng hàm prompt để người dùng nhập
             // vào giá trị và lưu giá tị đó vào phần tử i của mảng arrayInt
         }
@@ -28,6 +33,7 @@
         console.log("Các phần tử của mảng là")
         for (let i = 0; i < arrayInt.length; i++) {
             console.log("Phần tử thứ " + (i + 1) + ": " + arrayInt[i]);
+            //khi i = 0 =>>> in ra phần tử thứ 1 ==> kêt quả sẽ là : Phần tử thứ 1 : giá trị người dùng nhập vào ở ý 1
         }
 
         //3. In các phần tử có giá trị chẵn và tính tổng .
@@ -37,15 +43,18 @@
             if (arrayInt[i] % 2 === 0) {
                 // nếu arrayInt[i] là số chẵn thì hiển thị ra và tính tổng
                 console.log("Phần tử thứ " + (i + 1) + ": " + arrayInt[i]);
-                tongChan = tongChan + arrayInt[i];
+                tongChan += arrayInt[i];
+
             }
         }
-        // kết thúc vong lặp mới in tổng 
+        // kết thúc vong lặp mới in tổng
         console.log("Tổng các phần tử chẵn trong mảng là : " + tongChan)
 
-        //4. In các phần tử có chỉ số lẻ và tính tổng 
-        let tongChiSoLe = 0; // tạo 1 biến tổng tính tổng 
+        //4. In các phần tử có chỉ số lẻ và tính tổng
+        let tongChiSoLe = 0; // tạo 1 biến tổng tính tổng
         console.log("Các phần tử có vị trí lẻ trong mảng là :")
+        // duyệt mảng (chú ý ): - i: vị trí từng phần tử(index) 
+        //                      - arrayInt[i] : giá trị phần tử mảng arrayInt tại vị trí i
         for (let i = 0; i < arrayInt.length; i++) {
             if (i % 2 !== 0) {
                 // nếu i là số lẻ thì hiển thị ra và tính tổng
@@ -53,15 +62,16 @@
                 tongChiSoLe = tongChiSoLe + arrayInt[i];
             }
         }
-        // kết thúc vong lặp mới in tổng 
+        // kết thúc vong lặp mới in tổng
         console.log("Tổng các phần tử tại vị trí lẻ trong mảng là : " + tongChiSoLe);
 
         // 5. In giá trị phần tử trong mảng là số nguyên tố;
         // Ở đây chúng ta sẽ duyệt từng phần tử mảng để kiểm tra xem phần tử đó có phải số nguyên tố không .
+        console.log("Các số nguyên tố tìm được trong mảng là :")
         for (let i = 0; i < arrayInt.length; i++) {
             let n = arrayInt[i]; //Lấy ra giá trị phần tử hiện tại lưu vào biến n
 
-            // bắt đầu kiểm tra xem n có phải số nguyên tố không 
+            // bắt đầu kiểm tra xem n có phải số nguyên tố không
             let check = true; // giả sử n là số nguyên tố ứng với check = true
             if (n < 2) {
                 // số nguyên tố phải >= 2
@@ -109,6 +119,7 @@
 
         //7. Sắp xếp mảng giảm dần và in  giá trị các phần tử mảng sau khi đã sắp xếp
         // Sắp xếp mảng :
+        // thuật toán sắp xếp chọn 
         for (let i = 0; i < arrayInt.length - 1; i++) {
             for (let j = i + 1; j < arrayInt.length; j++) {
                 if (arrayInt[i] > arrayInt[j]) {
@@ -126,11 +137,11 @@
         }
 
         //8. Nhập vào 1 số nguyên và thống kê có bao nhiêu phần tử như vậy
-        // Nhập vào 1 số 
+        // Nhập vào 1 số
         let number = +prompt("Nhập vào 1 số cần kiểm tra")
-        // tạo 1 biến để đếm số lần xuất hiện 
+        // tạo 1 biến để đếm số lần xuất hiện
         let count = 0;
-        // duyệt mảng để tìm kiếm 
+        // duyệt mảng để tìm kiếm
         for (let i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i] === number) {
                 count++;
