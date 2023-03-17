@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Khai báo mảng 1 chiều
+        let array = [];
+        let total = 0;
+        let min, max;
+        let index = 0;
+        while (true) {
+            console.log("index =>>", index);
+            let number = prompt("Nhập vào 1 số");
+            // không phải số not a number , chuỗi rỗng "",
+            // isNaN , .trim()==="",
+            if (isNaN(number) || number.trim() === "" || number === null) {
+                break;
+            }
+            array[index] = +number;
+            total += +number;
+            index++;
+
+        }
+        console.log("mảng bạn vừa nhập là ");
+        console.log(array);
+        console.log("Tổng các số bạn vừa nhập là : ", total);
+        min = max = array[0]; // giả sử phần tử đầu tiên có giá trị min và max
+        for (let i = 1; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+            if (min > array[i]) {
+                min = array[i]
+            }
+        }
+        console.log("Giá trị nhỏ nhất là : " + min + ". giá tị lớn nhất là :" + max)
+
+    </script>
+</body>
+
+</html>

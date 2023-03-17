@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // CHo mảng số nguyễn sẵn
+        let array = [1, -2, 3, 5, -7, 4, 6, 8, -2];
+        // nhập vào 2 giá trị a và b
+        let a = +prompt("Nhập vào số thứ nhất a =");
+        let b = +prompt("Nhập vào số thứ hai b= ");
+
+        let min = Math.min(a, b)
+        let max = Math.max(a, b)
+        let newArray = [];
+        for (let i = 0; i < array.length; i++) {
+
+            if (array[i] >= min && array[i] <= max) {
+                newArray.push(array[i]);
+            }
+
+        }
+        console.log("Mảng các phần tử thoả mãn từ " + a + " đến " + b + " là");
+        console.log(newArray);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // tạo 1 mảng có 2 phần tử
+        let styles = ["Jazz", "Blues"];
+        //thêm phần tử vào cuối 
+        styles.push("Rock-n-Roll");
+        console.log(styles);
+        // nếu mảng có tổng phần tử là lẻ thì thay thế ptu chính giwuax là "Classics"
+        let length = styles.length;
+        if (length % 2 != 0) {
+            // styles.fill("Classics", (length - 1) / 2, (length + 1) / 2)
+            styles[(length - 1) / 2] = "Classics"
+        }
+        console.log(styles)
+        //xoá phần tử đâu tiên và hiển thị lại mảng
+        styles.shift()
+        console.log("mảng sau khi xoá hần tử đầu tiên")
+        console.log(styles)
+        // thêm 2 phân tử Rap” và “Reggae vào đầu mảng
+        styles.unshift("Rap", "Reggae");
+        console.log("mảng sau khi đã thêm là ")
+        console.log(styles)
+
+    </script>
+</body>
+
+</html>
