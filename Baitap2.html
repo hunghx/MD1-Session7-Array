@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre><script>
+        // Mảng 2 chiều là ma trậN vuồng có dạng n x n
+        // nhập vào sô chiều của ma trận
+        let n = +prompt("Hãy nhập vào số chiều của ma trận vuông n x n :");
+        let arrInt = [];
+        for (let i = 0; i < n; i++) {
+            arrInt[i] = [];
+            for (let j = 0; j < n; j++) {
+                arrInt[i][j] = +prompt("Nhập vào phẩn tử array[" + i + "][" + j + "] =");
+            }
+        }
+
+        // In giá trị các phần tử của mảng
+        // document.write
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                console.log(arrInt[i][j]);
+            }
+        }
+        // hiển thị trên tình duyệt
+
+        // for (let i = 0; i < n; i++) {
+        //     for (let j = 0; j < n; j++) {
+        //         document.write(" " + arrInt[i][j] + " ");
+        //     }
+        //     document.writeln();
+        // }
+
+        // in các phần tử trên đường biên : i =0, j=0, i=n-1, j=n-1
+        console.log("Các phần tử nằm trên đường biên của ma trận là")
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                if (i == 0 || j == 0 || i == n - 1 || j == n - 1) {
+                    console.log(arrInt[i][j])
+                }
+
+            }
+        }
+        // In các phần tử trên đường chéo chính và phụ 
+        // đường chéo chính : i=j
+        console.log("Các phần tử trên đường chéo chính là :")
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                if (i === j) {
+                    console.log(arrInt[i][j]);
+                }
+
+            }
+        }
+        // đường chéo phụ : i+j=n-1
+        console.log("Các phần tử trên đường chéo phụ là :")
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                if (i + j === n - 1) {
+                    console.log(arrInt[i][j]);
+                }
+
+            }
+        }
+
+        // sắp xếp theo dòng
+        for (let i = 0; i < n; i++) {
+            console.log(arrInt[i]);
+            // tiến hành sắp xếp theo dòng 
+            for (let k = 0; k < arrInt[i].length - 1; k++) {
+                for (let j = k + 1; j < arrInt[i].length; j++) {
+                    if (arrInt[i][k] > arrInt[i][j]) {
+                        let temp = arrInt[i][k];
+                        arrInt[i][k] = arrInt[i][j];
+                        arrInt[i][j] = temp
+                    }
+                }
+            }
+        }
+        // in theo hàng
+        for (let i = 0; i < arrInt.length; i++) {
+            console.log(arrInt[i])
+        }
+
+
+    </script>
+    </pre>
+</body>
+
+</html>
